@@ -1,6 +1,6 @@
 const Mural = (function(_render, Filtro){
     "use strict"
-    let cartoes = JSON.parse(localStorage.getItem("cartoes")) || []
+    let cartoes = JSON.parse(localStorage.getItem("cartoes")).map(cartaoLocal => new Cartao(cartaoLocal.conteudo, cartaoLocal.tipo)) || []
     const render = () => _render({cartoes: cartoes, filtro: Filtro.tagsETexto});
     render()
 
