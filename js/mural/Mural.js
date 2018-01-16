@@ -2,6 +2,7 @@ const Mural = (function(_render, Filtro){
     "use strict"
     let cartoes = JSON.parse(localStorage.getItem("cartoes")) || []
     const render = () => _render({cartoes: cartoes, filtro: Filtro.tagsETexto});
+    render()
 
     Filtro.on("filtrado", render)
 
