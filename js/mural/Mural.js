@@ -1,6 +1,6 @@
 const Mural = (function(_render, Filtro){
     "use strict"
-    let cartoes = []
+    let cartoes = JSON.parse(localStorage.getItem("cartoes")) || []
     const render = () => _render({cartoes: cartoes, filtro: Filtro.tagsETexto});
 
     Filtro.on("filtrado", render)
@@ -8,6 +8,7 @@ const Mural = (function(_render, Filtro){
     function adiciona(cartao){
         if (logado) {
             cartoes.push(cartao)
+            localStorage.setItem("cartoes", cartoes)
             cartao.on("mudanca.**", render)
             cartao.on("remocao", ()=>{
                 cartoes = cartoes.slice(0)
