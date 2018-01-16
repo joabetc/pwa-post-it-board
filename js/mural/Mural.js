@@ -5,10 +5,16 @@ const Mural = (function(_render, Filtro){
 
     Filtro.on("filtrado", render)
 
+    function salvaCartoes() {
+        localStorage.setItem("cartoes", JSON.stringify(
+            cartoes.map(cartao => ({conteudo: cartao.conteudo, tipo: cartao.tipo}))
+        ))
+    }
+
     function adiciona(cartao){
         if (logado) {
             cartoes.push(cartao)
-            localStorage.setItem("cartoes", JSON.stringify(cartoes))
+            salvaCartoes()
             cartao.on("mudanca.**", render)
             cartao.on("remocao", ()=>{
                 cartoes = cartoes.slice(0)
