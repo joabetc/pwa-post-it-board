@@ -8,7 +8,7 @@ const Mural = (function(_render, Filtro){
     function adiciona(cartao){
         if (logado) {
             cartoes.push(cartao)
-            localStorage.setItem("cartoes", cartoes)
+            localStorage.setItem("cartoes", JSON.stringify(cartoes))
             cartao.on("mudanca.**", render)
             cartao.on("remocao", ()=>{
                 cartoes = cartoes.slice(0)
