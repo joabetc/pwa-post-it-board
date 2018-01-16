@@ -1,4 +1,5 @@
 let logado = JSON.parse(localStorage.getItem("logado"))
+let usuario = localStorage.getItem("nomeUsuario")
 
 LoginUsuario_render({
   logado: logado,
@@ -7,6 +8,7 @@ LoginUsuario_render({
     logado = true,
     localStorage.setItem("logado", true),
     localStorage.setItem("nomeUsuario", nomeUsuario)
+    usuario = nomeUsuario
   },
   onLogout: () => {
     logado = false,
