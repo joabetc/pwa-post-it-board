@@ -32,15 +32,13 @@ let arquivos = ["/",
 
 self.addEventListener("install", function() {
     caches.open("ceep-arquivos").then(cache => {
-        caches.addAll(arquivos)
+        cache.addAll(arquivos)
     })
 })
 
 self.addEventListener("fetch", function(event) {
     let pedido = event.request
-    let promiseResposta = caches.open("ceep-imagens").then(cache => {
-        return cache.match(pedido)
-    }).then(respostaCache => {
+    let promiseResposta = caches.match(pedido).then(respostaCache => {
         let resposta = respostaCache ? respostaCache : fetch(pedido)
         return resposta
     })
