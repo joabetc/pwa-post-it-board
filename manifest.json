@@ -1,7 +1,7 @@
 {
     "name": "Ceep",
     "start_url": "./",
-    "display"; "standalone",
+    "display": "standalone",
     "icons": [
         {
             "src": "img/caelum-logo-256.png",
