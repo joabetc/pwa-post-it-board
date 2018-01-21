@@ -1,3 +1,5 @@
+// versão 2
+
 let arquivos = ["/",
     "css/estilos.css",
     "css/opcoesDaPagina.css",
