@@ -1,4 +1,5 @@
-let arquivos = ["css/estilos.css",
+let arquivos = ["/",
+    "css/estilos.css",
     "css/opcoesDaPagina.css",
     "css/opcoesDoCartao.css",
     "css/cabecalho.css",
