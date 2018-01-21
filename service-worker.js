@@ -1,10 +1,10 @@
-// versão 2
+// versão 3
 
 let arquivos = ["/",
     "css/estilos.css",
     "css/opcoesDaPagina.css",
     "css/opcoesDoCartao.css",
-    "css/cab.css",
+    "css/cabecalho.css",
     "css/login.css",
     "css/loginForm.css",
     "css/loginStatus.css",
