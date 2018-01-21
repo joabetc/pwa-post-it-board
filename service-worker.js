@@ -1,4 +1,4 @@
-let versao = 5
+let versao = 6
 
 let arquivos = ["/",
     "css/estilos.css",
