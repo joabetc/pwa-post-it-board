@@ -32,7 +32,7 @@ let arquivos = ["/",
     "img/bin2.svg",
     "img/edit.svg"]
 
-self.addEventListener("install", function() {
+self.addEventListener("activate", function() {
     caches.open("ceep-arquivos-" + versao).then(cache => {
         cache.addAll(arquivos).then(function() {
             caches.delete("ceep-arquivos-" + (versao - 1))
